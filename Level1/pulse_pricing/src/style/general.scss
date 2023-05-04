@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5 !important;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: Work Sans, sans-serif;
+    background-color: #eafaf1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.options--container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .options--container {
+        padding: 5rem 3rem 0 3rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+}
+
+@import "./header";
+@import "./hero";
+@import "./basic";
+@import "./business";
+@import "./features";
+@import "./testimonial";
+@import "./faq";
+@import "./footer";
+@import "./contact";

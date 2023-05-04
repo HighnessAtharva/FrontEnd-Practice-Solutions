@@ -1,0 +1,165 @@
+.logo--link {
+    display: flex;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        background: #fff;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #d6dae5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .header--mobile--menu--toggle {
+            border: none;
+            background: none;
+        }
+
+        .header--nav {
+            width: 100%;
+        }
+
+        .header--nav--ul {
+            list-style-type: none;
+            display: none;
+            flex-direction: column;
+
+            &.show {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                top: 5.15rem;
+                width: 100%;
+                padding: 1.5rem;
+                background: #eafaf1;
+                display: flex;
+                gap: 1rem;
+
+                @keyframes opacity {
+                    from {opacity: 0;}
+                    to {opacity: 1;}
+                }
+
+                .link--one {
+                    opacity: 1;
+                    animation: opacity .3s;
+                }
+
+                .link--two {
+                    opacity: 1;
+                    animation: opacity .6s;
+                }
+
+                .link--three {
+                    opacity: 1;
+                    animation: opacity .9s;
+                }
+                
+                .link--four {
+                    opacity: 1;
+                    animation: opacity 1.2s;
+                }
+
+                .link--five {
+                    opacity: 1;
+                    animation: opacity 1.5s;
+                }
+
+                .link--six {
+                    opacity: 1;
+                    animation: opacity 1.8s;
+                }
+
+                .header--nav--ul--sign-up {
+                    opacity: 1;
+                    animation: opacity 2.1s;
+                }
+            }
+
+            .header--nav--ul--li--sign-up {
+                margin-top: 1rem;
+            }
+            
+            a {
+                font-size: 1.25rem;
+                color: #00804F;
+                font-weight: 700;
+                text-decoration: none;
+                opacity: 0;
+
+                &.header--nav--ul--sign-up {
+                    background: linear-gradient(90deg,#00ab6a,#23ea76);
+                    padding: 1rem;
+                    color: #062c27;
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 3rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header--mobile--menu--toggle {
+            display: none;
+        }
+
+        .header--nav--ul {
+            list-style-type: none;
+            display: flex;
+            gap: 2.5rem;
+
+            .invisible--li {
+                display: none;
+            }
+
+            a {
+                color: #00804F;
+                font-weight: 700;
+                text-decoration: none;
+
+                &.link--three {
+                    color: #062c27;
+                }
+
+                &.header--nav--ul--sign-up {
+                    border: 2px solid #00ab6a;
+                    padding: .4rem 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        .header--nav--ul {
+            .header--nav--ul--sign-up {
+                transition: .2s;
+            }
+
+            a:hover {
+                color: #062c27;
+
+                &.header--nav--ul--sign-up {
+                    color: #062c27;
+                    background: #00ab6a;
+                    transition: .2s;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    header {
+        padding: 3rem 12rem;
+    }
+}
