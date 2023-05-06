@@ -1,0 +1,113 @@
+.main {
+    margin-top: calc(130px + 120*(100vw - 320px)/ 2180);
+    padding: 1.75rem 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    h1 {
+        display: flex;
+        color: $white;
+        
+        span {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: -1;
+            width: fit-content;
+            font-size: 9.5vw;
+            font-family: whyte-medium;
+            font-weight: 500;
+            line-height: 1.1;
+            letter-spacing: -.025rem;
+
+            img {
+                position: absolute;
+                user-select: none;
+                pointer-events: none;
+
+                &.build--svg {
+                    bottom: 1rem;
+                    bottom: 0;
+                    left: 0;
+                    display: block;
+                    transform: translate3d(-5%,-80%,15%);
+                }
+
+                &.grow--svg {
+                    bottom: 0;
+                    left: 0;
+                    display: block;
+                    transform: translate3d(-8%,25%,0);
+                }
+
+                &.serve--svg {
+                    bottom: 1rem;
+                    bottom: 0;
+                    left: 0;
+                    display: block;
+                    transform: translate3d(-5%,-35%,15%);
+                }
+            }
+        }
+    }
+
+    p {
+        color: $white;
+        padding-top: calc(40px + 40*(100vw - 320px)/ 2180);
+        max-width: 1080px;
+    }
+
+    .video--player {
+        z-index: 0;
+        margin: calc(55px + 65*(100vw - 320px)/ 2180) auto 0 auto;
+        width: 100%;
+        max-width: calc(1920 / 1080 * 100vh);
+        height: calc(1080 / 1920 * 100vw);
+        position: relative;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .main {
+        padding: 2.125rem 4vw;
+
+        h1 {
+            span {
+                font-size: clamp(48px,8vw,132px);
+            }
+        }
+
+        p {
+            max-width: 500px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        p {
+            max-width: unset;
+            padding-right: 32vw;
+        }
+    }
+}
+
+.hero--light {
+    h1 {
+        z-index: 0;
+        color: $black;
+    }
+
+    p {
+        color: $black;
+    }
+}

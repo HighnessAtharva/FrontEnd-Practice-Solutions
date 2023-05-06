@@ -1,0 +1,215 @@
+header {
+    padding: 1.75rem 8vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    transition: top .2s;
+    background: $black;
+    z-index: 99;
+
+    .logo--toggle--container {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .logo {
+        position: relative;
+        z-index: 100;
+        fill: $white;
+        transition: .2s;
+        min-width: 110px;
+    }
+
+    .theme--toggle--button {
+        border: none;
+        background: none;
+        width: 20px;
+        height: 20px;
+    }
+
+    .menu--button {
+        width: 20px;
+        height: 15px;
+        z-index: 100;
+        display: grid;
+        place-content: center;
+        background: none;
+        border: none;
+
+        .menu--icon {
+            fill: $white;
+            transition: .2s;
+        }
+    }
+
+    nav {
+        width: 100%;
+
+        ul {
+            list-style-type: none;
+            display: none;
+
+            &.show {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding-left: 8vw;
+                height: 100vh;
+                width: 100%;
+                z-index: 99;
+                animation-name: opacity;
+                animation-duration: .2s;
+                background: $black;
+
+                @keyframes opacity {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+            a {
+                font-family: monument-grotesk-mono;
+                font-size: .875rem;
+                letter-spacing: .8px;
+                line-height: 1.71;
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    header {
+        padding: 2.5rem 4vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 2.5rem 4vw;
+        flex-wrap: nowrap;
+        
+        .menu--button {
+            display: none;
+        }
+        
+        nav {
+            ul {
+                .mobile--only {
+                    display: none;
+                }
+
+                justify-content: flex-end;
+                display: flex;
+                gap: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        .theme--toggle--button {
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover {
+                transform: scale(1.2);
+                transition: .2s;
+            }
+        }
+
+        nav {
+            ul {
+                a {
+                    position: relative;
+
+                    &::before, &::after {
+                        display: flex;
+                        opacity: 0;
+                        pointer-events: none;
+                        position: absolute;
+                        top: calc(50% - 1px);
+                        transform: translateY(-50%);
+                        transition: opacity .3s ease-in-out;
+                    }
+
+                    &::before {
+                        content: "[";
+                        left: -20px;
+                    }
+
+                    &::after {
+                        content: "]";
+                        right: -20px;
+                    }
+
+                    &:hover {
+                        &::before, &::after {
+                            opacity: .5;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header--light {
+        nav {
+            ul {
+                a {
+                    &:hover {
+                        &::before, &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header--light {
+    background: $white;
+    transition: .2s;
+
+    .logo {
+        fill: $black;
+        transition: .2s;
+    }
+
+    .menu--button {
+        .menu--icon {
+            fill: $black;
+            transition: .2s;
+        }
+    }
+
+    ul {
+        &.show {
+            background: $white;
+        }
+
+        a {
+            color: $black;
+        }
+    }
+}

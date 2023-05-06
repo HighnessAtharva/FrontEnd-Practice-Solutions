@@ -1,0 +1,67 @@
+.faq{
+    margin: 2rem 5rem;
+    position: relative;
+    z-index: 1;
+        @media only screen and (max-width:$small-bp){
+            margin: 1rem 3rem;
+
+}
+@media only screen and (max-width:375px){
+    margin: 0.3rem 1rem;
+}
+
+    &__title{
+        font-size: 3rem;
+        @include title-style;
+        margin-bottom: 2rem;
+        @media only screen and (max-width:$small-bp){
+        font-size: 1.8rem;
+    }
+    }
+    &__function{
+        &--checkbox-1, &--checkbox-2, &--checkbox-3, &--checkbox-4{
+            display: none;
+            opacity: 0;
+            
+        }
+        &--question-1,  &--question-2,  &--question-3, &--question-4{
+            font-size: 1.5rem;
+
+            line-height: 2;
+            color: $grey;
+            font-weight: 700;
+         
+            @media only screen and (max-width:$small-bp){
+             font-size: 1rem;
+            
+            }
+                i{
+                    margin-bottom: 0.3rem;
+                    margin-left: 0.5rem;
+                }
+
+                &:hover{
+                    color: $primary-green;
+                }
+        }
+        &--answer-1,&--answer-2,&--answer-3,&--answer-4{
+            opacity: 0;
+            display: none;
+            margin-bottom: 1rem;
+        }
+    }
+
+}
+
+.faq__function--checkbox-1:checked ~ .faq__function--answer-1{
+    @include faq-toggle;
+}
+.faq__function--checkbox-2:checked ~ .faq__function--answer-2{
+    @include faq-toggle;
+}
+.faq__function--checkbox-3:checked ~ .faq__function--answer-3{
+    @include faq-toggle;
+}
+.faq__function--checkbox-4:checked ~ .faq__function--answer-4{
+    @include faq-toggle;
+}

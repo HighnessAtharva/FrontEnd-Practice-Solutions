@@ -1,0 +1,39 @@
+.box{
+    position: relative;
+        &__img{
+          float: left;
+          width: 6rem;
+          margin-right: 1rem;
+    }
+
+    &__title{
+      font-size: 1.8rem;
+      overflow: hidden;
+      margin-top: .5rem;
+    }
+
+    &__para{
+      overflow: hidden;
+      font-size: 1.4rem;
+      margin-top: .4rem;
+    }
+
+    &__link{
+      @include center;
+      transition: all 1s;
+      font-size: 1.2rem;
+      border: 1px solid black;
+      padding: 0.2rem .4rem;
+      box-shadow: .5rem .8rem #000000;
+      text-decoration: none;
+      margin-top: 6rem;
+      color: black;
+
+        &:hover{
+            border: 0.1rem solid $dark-purple;
+            box-shadow: .5rem .8rem $dark-purple;
+            text-decoration: underline;
+            color: $dark-purple;
+      }
+    }
+  }

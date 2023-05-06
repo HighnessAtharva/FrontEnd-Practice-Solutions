@@ -1,0 +1,107 @@
+.hero--container {
+    padding: 7.5rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+
+    .hero--heading {
+        font-size: 2.375rem;
+        color: $dark-gray;
+
+        span {
+            color: #038268;
+        }
+    }
+
+    .hero--description {
+        font-size: 1.125rem;
+        color: $dark-gray;
+        line-height: 1.5;
+    }
+
+    .hero--video--container {
+        margin-top: 3rem;
+        overflow: hidden;
+        position: relative;
+        height: 12.5rem;
+        width: 100%;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero--container {
+        padding: 7.5rem 4rem 0 4rem;
+
+        .hero--heading {
+            font-size: 3.5rem;
+        }
+
+        .hero--description {
+            font-size: 1.5rem;
+            max-width: 550px;
+        }
+
+        .hero--video--container {
+            height: 25rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero--container {
+        padding: 7.5rem 5rem 0 5rem;
+
+        .hero--video--container {
+            height: 30rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .hero--container {
+        .hero--heading {
+            font-size: 4rem;
+        }
+
+        .hero--description {
+            font-size: 1.625rem;
+        }
+
+        .hero--video--container {
+            margin-top: 5rem;
+            width: 75%;
+            height: 32.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero--container {
+        .hero--video--container {
+            height: 37.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .hero--container {
+        .hero--heading {
+            font-size: 5rem;
+        }
+
+        .hero--description {
+            max-width: 700px;
+            font-size: 2rem;
+        }
+    }
+}

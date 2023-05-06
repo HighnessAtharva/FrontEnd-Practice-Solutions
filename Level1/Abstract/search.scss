@@ -1,0 +1,25 @@
+.search{
+    background-color: $light-purple;
+    height: 20rem;
+    position: relative;
+    margin-bottom: 3.5rem;
+
+    &__title{
+        margin:0;
+        padding-top: 3rem;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: lighter;
+    }
+    
+    &__box{
+      @include center;      
+      height: 3rem;
+      width: 45rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+      border: 0.1rem solid $black;
+      text-indent: 1rem;
+    }
+}

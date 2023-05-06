@@ -1,0 +1,184 @@
+.absolute--fix {
+    height: 15rem;
+}
+
+@media screen and (min-width: 425px) {
+    .absolute--fix {
+        height: 20rem;
+    }
+}
+
+.partners--container {
+    display: flex;
+    justify-content: center;
+    padding-top: calc(100px + 120*(100vw - 320px)/ 2180);
+    padding-right: 1rem;
+    width: 100%;
+
+    .row {
+        position: relative;
+        width: 33.33333%;
+
+        img {
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            animation: display 13.5s infinite;
+
+            &.imgrow2 {
+                animation: display 13.65s infinite;
+            }
+
+            &.imgrow3 {
+                animation: display 13.8s infinite;
+            }
+
+            &.img11 {
+                animation-delay: 1.5s;
+            }
+
+            &.img12 {
+                animation-delay: 3s;
+            }
+
+            &.img13 {
+                animation-delay: 4.5s;
+            }
+
+            &.img14 {
+                animation-delay: 6s;
+            }
+
+            &.img15 {
+                animation-delay: 7.5s;
+            }
+
+            &.img16 {
+                animation-delay: 9s;
+            }
+
+            &.img17 {
+                animation-delay: 10.5s;
+            }
+
+            &.img18 {
+                animation-delay: 12s;
+            }
+
+            &.img21 {
+                animation-delay: 1.7s;
+            }
+
+            &.img22 {
+                animation-delay: 3.2s;
+            }
+
+            &.img23 {
+                animation-delay: 4.70s;
+            }
+
+            &.img24 {
+                animation-delay: 6.2s;
+            }
+
+            &.img25 {
+                animation-delay: 7.7s;
+            }
+
+            &.img26 {
+                animation-delay: 9.2s;
+            }
+
+            &.img27 {
+                animation-delay: 10.7s;
+            }
+
+            &.img28 {
+                animation-delay: 12.2s;
+            }
+
+            &.img31 {
+                animation-delay: 1.9s;
+            }
+
+            &.img32 {
+                animation-delay: 3.4s;
+            }
+
+            &.img33 {
+                animation-delay: 4.90s;
+            }
+
+            &.img34 {
+                animation-delay: 6.4s;
+            }
+
+            &.img35 {
+                animation-delay: 7.90s;
+            }
+
+            &.img36 {
+                animation-delay: 9.4s;
+            }
+
+            &.img37 {
+                animation-delay: 10.90s;
+            }
+
+            &.img38 {
+                animation-delay: 12.4s;
+            }
+        }
+    }
+}
+
+@keyframes display {
+    0% {
+      transform: translateY(-40px);
+      opacity: 0;
+    }
+
+    7.5% {
+        transform: translateY(0);
+    }
+
+    10% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    // 15% {
+    //     transform: translateY(-40px);
+    //     opacity: 0;
+    // }
+
+    17.5% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    20% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .partners--container {
+        padding-right: 1.75rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .partners--container {
+        margin: auto;
+        width: 60.125%;
+        padding-right: unset;
+    }
+}

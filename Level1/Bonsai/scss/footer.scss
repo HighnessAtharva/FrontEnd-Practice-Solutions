@@ -1,0 +1,48 @@
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 3rem;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    margin-top: 6rem;
+    @media  (max-width:375px){
+        margin-right: 2rem;
+    
+    }
+        @media only screen and (max-width:$small-bp){
+            grid-template-columns: 200px 200px;
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: 1rem;
+        @media only screen and (max-width:$small-bp){
+            font-size: 1.2rem;
+    }
+    }
+
+    &__list{
+        list-style: none;
+
+        &--lis{
+            line-height: 3;
+
+            &-drop1, &-drop2 {
+                opacity: 0;
+                color: $primary-green;
+                display: none;
+            }
+        }
+    }
+}
+
+.invoice-check{
+    opacity: 0;
+}
+
+.invoice-check:checked + .footer__list--lis-drop1{
+    opacity: 1;
+    display: block;
+}
+

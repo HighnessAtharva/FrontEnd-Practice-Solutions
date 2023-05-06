@@ -1,0 +1,27 @@
+// Colors:
+$primary-green: #00b289;
+$dark-green: #008b6b;
+$white: #ffffff;
+$grey: #4c4d5f;
+$box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+//Break Points
+$medium-cards-bp: 900px;
+$second-medium-bp: 950px;
+$small-bp: 600px;
+$second-small-bp: 700px;
+
+*{
+    font-family: 'Nunito Sans', sans-serif;;
+    margin: 0;
+    padding:0;
+
+}
+html{
+    background: 
+        linear-gradient(to left,
+         rgb(246, 251, 255) 100%,
+          transparent 0%
+          );
+
+}

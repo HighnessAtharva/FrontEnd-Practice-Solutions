@@ -1,0 +1,140 @@
+.projects--section {
+    margin-top: calc(55px + 65*(100vw - 320px)/ 2180);
+    padding: 1.75rem 8vw;
+
+    .projects--heading--work--container {
+        .projects--heading {
+            margin-top: 20px;
+            font-family: whyte-book;
+            font-weight: 400;
+            font-size: calc(28px + 44*(100vw - 320px)/2180);
+            letter-spacing: -.04rem;
+            word-spacing: 0.02rem;
+            line-height: 1.17;
+            color: $white;
+        }
+    }
+
+    .projects--works--container {
+        padding-top: calc(40px + 120*(100vw - 320px)/ 2180);
+
+        .projects--work {
+            display: flex;
+            flex-direction: column;
+            margin-top: calc(80px + 120*(100vw - 320px)/ 2180);
+            color: $white;
+            text-decoration: none;
+
+            h3 {
+                margin: 20px 0;
+                font-size: calc(19px + 13*(100vw - 320px)/ 2180);
+                font-family: whyte-medium;
+                font-weight: 400;
+                letter-spacing: .1px;
+                line-height: 1.5;
+                word-spacing: 0.4px;
+            }
+
+            p {
+                font-family: monument-grotesk-semi-mono;
+                font-size: 14px;
+                letter-spacing: .8px;
+                line-height: 1.71;
+                max-width: 500px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .projects--section {
+        margin-top: calc(85px + 65*(100vw - 320px)/ 2180);
+        padding: 2.125rem 4vw;
+
+        .projects--heading--work--container {
+            max-width: 845px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            a {
+                margin-top: 40px;
+            }
+        }
+
+        .projects--works--container {
+            padding-top: calc(100px + 120*(100vw - 320px)/ 2180);
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .projects--section {
+        .projects--heading--work--container {
+            margin: auto;
+            max-width: 525px;
+        }
+
+        .projects--works--container {
+            a {
+                .text--container {
+                    display: flex;
+                    align-items: baseline;
+                    justify-content: space-between;
+
+                    h3 {
+                        padding-right: 8vw;
+                    }
+
+                    p {
+                        width: 72.5%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .projects--section {
+        .projects--heading--work--container {
+            max-width: 750px;
+        }
+
+        .projects--works--container {
+            padding-top: calc(120*(100vw - 320px)/ 2180);
+            display: flex;
+            justify-content: space-between;
+            gap: 4vw;
+
+            a {
+                width: 50%;
+
+                .text--container {
+                    display: unset;
+
+                    h3 {
+                        padding-right: unset;
+                    }
+
+                    p {
+                        width: unset;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.projects--light {
+    .projects--heading {
+        color: $black !important;
+    }
+
+    a {
+        color: $black !important;
+    }
+
+}

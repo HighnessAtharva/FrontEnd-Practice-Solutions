@@ -1,0 +1,173 @@
+.hamburger__label{
+    display: block;
+    height: 5rem;
+    width: 5rem;
+    margin-left: 2rem;
+    position: absolute;
+    right: 3rem;
+    opacity: 0;
+    top: 2rem;
+    z-index: 100;
+
+    @media only screen and (max-width:$second-medium-bp){
+        opacity: 1;
+}
+
+            &--checkbox{
+                opacity: 0;
+                display: none;
+            }
+            &--lines{
+                width: 2.5rem;
+                display: block;
+                height: 0.3rem;
+                background-color: grey;
+                margin-bottom: 0.5rem;
+                border-radius: 10px;
+        }
+            &--lines1{
+                width: 2.5rem;
+                display: block;
+                height: 0.3rem;
+                background-color: grey;
+                margin-bottom:  0.5rem;
+                border-radius: 10px;      
+        }
+            &--lines2{
+                width: 2.5rem;
+                display: block;
+                height: 0.3rem;
+                background-color: grey;
+                border-radius: 10px;   
+            }
+}
+
+.content{
+    opacity: 0;
+    position: absolute;
+    margin-left: 2rem;
+    display: none;
+    
+    @media not screen and (max-width:$second-medium-bp){
+        opacity: 0;
+        display: none;
+}
+        &__img{
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 2rem;
+        }
+        &__link{
+            display: block;
+            font-size: 1.4rem;
+            text-decoration: none;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            border-bottom: 1px solid gray;
+            width: 60rem;
+            color: gray;
+        }
+        &__button{
+            display: block;
+            border: 1px solid $primary-green;
+            background-color: white;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            width: 50%;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            color: $primary-green;
+            margin-top: 1rem;
+
+            @media only screen and (max-width:950px){
+                width: 50rem;
+            } 
+            @media only screen and (max-width:928px){
+                width: 48rem;
+            }  
+            @media only screen and (max-width:912px){
+                width: 50rem;
+            }  
+            @media only screen and (max-width:860px){
+                width: 40rem;
+            } 
+            @media only screen and (max-width:715px){
+                width: 30rem;
+            }
+            @media only screen and (max-width:540px){
+                width: 25rem;
+            }
+            @media only screen and (max-width:414px){
+                width: 20rem;
+            }
+           @media only screen and (max-width:375px){
+                width:  32%;
+                }   
+                
+            @media only screen and (max-width:360px){
+                width:  30%;
+                }
+                &:hover{
+                    @include dark-green-btn-hover;
+                    color: white;
+                }
+
+                &-2{
+                    background-color: $primary-green;
+                    color: white
+                }
+              }
+            }
+
+
+.hamburger__backgrond{
+    background-color: rgb(255, 255, 255);
+    width: 4rem;
+    bottom: 3rem;
+    right: 0.5rem;
+    height: 4rem;
+    position: absolute;
+    opacity: 0;
+    display: none;
+    z-index: -2;
+
+    @media not screen and (max-width:$second-medium-bp){
+        opacity: 1;
+    }
+}
+
+.hamburger__label--checkbox:checked ~ .hamburger__backgrond{
+    transform: scale(30,15);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    transition: all 3s;
+    z-index: 8;
+}
+
+.hamburger__label--checkbox:checked ~ .content{
+    opacity: 1;
+    position: absolute;
+    z-index: 8;
+    display: block;
+}
+
+.hamburger__label--checkbox:checked + .hamburger__label  .hamburger__label--lines1{
+    opacity: 0;
+    display: none;
+}
+.hamburger__label--checkbox:checked + .hamburger__label .hamburger__label--lines{
+    transform: translateY(45deg);
+    top:0;
+    position: absolute;
+}
+
+.hamburger__label--checkbox:checked + .hamburger__label .hamburger__label--lines2{
+    transform: translateY(-45deg);
+    top:1rem;
+    position: absolute;
+
+}
+
+ 

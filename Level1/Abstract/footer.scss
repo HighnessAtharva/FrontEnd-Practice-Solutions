@@ -1,0 +1,36 @@
+.foot{
+    position: relative;
+    margin-top: 4rem;
+    height: 25rem;
+    background-color: #000000;
+    color: white;
+  }
+  
+  .content{
+    &__title{
+      font-size: 1.5rem;
+      position: relative;
+  
+    }
+    &__links{
+      line-height: 1.5rem;
+      
+      &--a{
+        text-decoration: none;
+        color: $white;
+        transition: all .8s;
+  
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    &__copyright{
+      @include center;
+      margin-top: 8.5rem;
+  
+      &:hover{
+        color: $light-purple;
+      }
+    }
+  }

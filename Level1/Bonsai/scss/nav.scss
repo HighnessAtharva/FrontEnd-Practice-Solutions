@@ -1,0 +1,118 @@
+.navigation{
+    padding-top: 1.4rem;
+    box-shadow: $box-shadow;
+    height: 4rem;
+    position: fixed;
+    width: 100vw;
+    background-color: white;
+    z-index: 21;
+
+        &__image{
+            width: 10rem;
+            height: auto;
+            float: left;
+            margin-left: 2rem;
+            z-index: -10;
+            position: relative;
+        }
+        &__contain{
+            list-style: none;
+            
+        }
+        &__list{
+            float: right;
+            display: block;
+            margin-top: 1.3rem;
+          
+            @media only screen and (max-width:$second-medium-bp){
+                    opacity: 0;
+                    display: none;
+            }
+    }
+    &__link{
+        margin-right: 1rem;
+        text-decoration: none;
+        color:#4c4d5f;
+        
+        &--btn1{
+            @include button-style;
+            font-weight: 700;
+            margin-left: 2rem;
+            color: $primary-green;
+
+            &:hover{
+                background-color: #00b289;
+                transition: all .6s;
+                color: white;
+
+            }
+        }
+
+        &--btn2{
+            @include button-style;
+            background-color: $primary-green;
+            color: $white;
+            font-weight: 700;
+
+                &:hover{
+                  @include dark-green-btn-hover;
+
+                }
+        }
+    }
+}
+
+.dropdown1{
+   @include drop-down-style;
+   transition: all 1s;
+
+        &__info{
+        &:not(:last-child){
+            @include drop-down-borders;
+    }
+   }
+}
+
+.dropdown2{
+    @include drop-down-style;
+    transition: all 2s;
+
+    &__info{
+        display: grid;
+        grid-template-columns: 20px 200px;
+        margin-bottom: 1rem;
+        grid-gap: 1rem;
+
+        &:not(:last-child){
+           @include drop-down-borders;
+        }
+        
+       &--image{
+           height: 2rem;
+           width: auto;
+       }
+       &--title{
+        font-size: 1rem;
+       }
+    }
+}
+.product:hover + .dropdown1{
+   @include dropdown-visible;
+
+}
+
+.templates:hover + .dropdown2{
+    @include dropdown-visible;
+}
+
+.arrow {
+    border: solid $primary-green;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }

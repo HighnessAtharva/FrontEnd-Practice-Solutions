@@ -1,0 +1,46 @@
+.cta--section {
+    padding: 1.75rem 8vw;
+
+    .cta--heading {
+        font-size: calc(28px + 68*(100vw - 320px)/ 2180);
+        font-weight: 400;
+        letter-spacing: -0.04rem;
+        word-spacing: 0.02rem;
+        line-height: 1.17;
+        color: $white;
+
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .cta--section {
+        margin-top: calc(50px + 120*(100vw - 320px)/ 2180);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cta--section {
+        margin-top: calc(160px + 120*(100vw - 320px)/ 2180);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .cta--section {
+        margin-top: 32.5vh;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .cta--section {
+        margin-top: 40vh;
+    }
+}
+
+.cta--light {
+    .cta--heading {
+        color: $black !important;
+    }
+}

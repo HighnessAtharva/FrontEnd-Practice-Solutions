@@ -1,0 +1,59 @@
+$black: #000;
+$white: #fff;
+$purple: #6c83ff;
+$brown: #ffa98e;
+
+@font-face {
+    font-family: monument-grotesk-mono;
+    src: url(../fonts/00b834c.woff2);
+}
+
+@font-face {
+    font-family: monument-grotesk-semi-mono;
+    src: url(../fonts/e21b9b1.woff2);
+}
+
+@font-face {
+    font-family: whyte-medium;
+    src: url(../fonts/f68ea8a.woff2);
+}
+
+@font-face {
+    font-family: whyte-book;
+    src: url(../fonts/2a33d70.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: $black;
+    // color: $white;
+    font-family: whyte-book;
+}
+
+.body--light {
+    background: $white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@import "./header";
+@import "./hero";
+@import "./articles";
+@import "./projects";
+@import "./partners";
+@import "./cta";
+@import "./footer";
+@import "./newsletter";
+// REUSABLE COMPONENTS
+@import "./btnlink_component";
+@import "./paragraph";

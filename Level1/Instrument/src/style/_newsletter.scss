@@ -1,0 +1,195 @@
+.newsletter--modal {
+    padding: 1.5rem 8vw;
+    position: fixed;
+    background-color: hsla(0,0%,100%,.1);
+    backdrop-filter: blur(1vw);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    animation-name: show;
+    animation-duration: .3s;
+    
+    @keyframes show {
+        0% {
+            transform: translate(0%, 100%) matrix(1, 0, 0, 1, 0, 0);
+        }
+
+        100% {
+            transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0);
+        }
+    }
+
+    .heading--close_btn--container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .at--heading--container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .at {
+                fill: $white;
+            }
+
+            h3 {
+                font-size: 14px;
+                font-family: monument-grotesk-semi-mono;
+                font-weight: 400;
+                letter-spacing: .8px;
+                line-height: 1;
+                color: $white;
+            }
+        }
+
+        button {
+            background: transparent;
+            border-radius: 100%;
+            border: 1px solid hsla(0,0%,100%,.25);
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-content: center;
+            stroke: #fff;
+        }
+    }
+
+    .newsletter--form {
+        margin-top: calc(64px + 8vw);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        input {
+            color: $white;
+            font-size: calc(24px + 24*(100vw - 320px)/ 2180);
+            border: none;
+            border-bottom: 1px solid $white;
+            background: transparent;
+            width: 100%;
+            padding: .3ch 0;
+            outline: none;
+
+            &::placeholder {
+                color: $white;
+            }
+        }
+
+        button {
+            margin-top: 6vw;
+            color: $white;
+            border: 1px solid hsla(0,0%,100%,.25);
+            background: transparent;
+            border-radius: 22px;
+            height: 44px;
+            padding: 0 24px;
+            font-family: monument-grotesk-semi-mono;
+            font-size: 14px;
+            line-height: 1.71;
+            letter-spacing: .8px;
+
+            .arrow {
+                margin-left: 15px;
+                fill: $white;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .newsletter--modal {
+        padding: 2rem 4vw;
+
+        .newsletter--form {
+            margin-top: 96px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .newsletter--modal {
+        .newsletter--form {
+            margin-top: 64px;
+            flex-direction: row;
+            align-items: center;
+
+            input {
+                width: 70%;
+                max-width: 600px;
+                margin-right: 4vw;
+            }
+
+            button {
+                margin-top: unset;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .newsletter--modal {
+        .heading--close_btn--container {
+            button {
+                cursor: pointer;
+                transition: .2s;
+
+                &:hover {
+                    border: 1px solid $white;
+                    background: $white;
+                    stroke: #000;
+                    transition: .2s;
+                }
+            }
+        }
+    }
+}
+
+.newsletter--light {
+    &.newsletter--modal {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        background-color: rgba(194, 194, 194, 0.2) !important;
+    }
+
+
+    .heading {
+        color: $black !important;
+    }
+
+    .at {
+        fill: $black !important;
+    }
+
+    .heading--close_btn--container {
+        button {
+            border: 1px solid $black;
+            stroke: $black;
+
+            &:hover {
+                background: $black;
+                stroke: $white;
+            }
+        }
+    }
+
+    .newsletter--form {
+        input {
+            color: $black;
+            border-bottom: 1px solid $black;
+
+            &::placeholder {
+                color: $black;
+            }
+        }
+
+        button {
+            color: $black;
+            border: 1px solid $black;
+
+            .arrow {
+                fill: $black;
+            }
+        }
+    }
+}

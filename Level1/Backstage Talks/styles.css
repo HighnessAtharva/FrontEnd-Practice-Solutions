@@ -1,0 +1,40 @@
+body {
+  color: #000;
+  background-color: #f4f4f4;
+  transition: background-color 1s ease;
+  font-family: "Roboto";
+}
+body::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+
+/* panel styles */
+.panel {
+  /* min height incase content is higher than window height */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto";
+  /* outline: 10px solid hotpink; */
+  /* turn above on to see the edge of panels */
+}
+
+/* colours */
+.color-violet {
+  background-color: #00c1b5;
+}
+.color-indigo {
+  background-color: #ff651a;
+}
+.color-blue {
+  background-color: #ffbe00;
+}
+.color-green {
+  background-color: #1d3fbb;
+}
+.color-yellow {
+  background-color: #e30512;
+}

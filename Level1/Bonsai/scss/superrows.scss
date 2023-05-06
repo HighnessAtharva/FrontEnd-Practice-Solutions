@@ -1,0 +1,75 @@
+.superrow{
+    @include section-margins;
+
+    &__title{
+        @include title-style;
+        margin-top: 5rem;
+        margin-bottom: 1.2rem;
+
+        @media only screen and (max-width:$second-small-bp){
+            font-size: 1.6rem;
+        }
+    }
+    
+    &__grid{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        
+        &--item{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-rows: 50px 50px;
+            background-color: $white;
+            box-shadow: $box-shadow;
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            
+            @media only screen and (max-width:$small-bp){
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            &-title{
+                font-size: 1.5rem;
+                color: $grey;
+     
+         }
+            &-para{
+                grid-row: 2;
+                font-size: 1.1rem;
+            }
+            &-price{
+                margin-left: auto; 
+                font-weight: 500;
+                margin-right: 1rem;
+                font-size: 2rem;
+                font-weight: 700;
+                grid-column: 3;
+            }
+            &-btn{
+                grid-row: 3;
+                grid-column: 1;
+                color: $primary-green;
+                font-weight: 700;
+                text-decoration: none;
+              
+                    @media only screen and (max-width:$small-bp){
+                        margin-top: 1.5rem;
+                   }
+                  
+                    @media only screen and (max-width:400px){
+                            margin-top: 4.1rem;
+                        }
+            
+                    &:hover{
+                        text-decoration: underline;
+                    }
+            }
+            &-month{
+                grid-column: 3/4;
+                margin-left: auto; 
+                margin-right: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    font-family: Helvetica;
+}
+.nav{
+  &__links{
+    list-style-type: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: $black;
+    height: 6.5rem;
+    overflow: hidden;
+  }
+  &__help{
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 2.5rem;
+    left: 11rem;
+    font-size: 1.4rem;
+
+      &:hover{
+        text-decoration: underline;
+  }
+}
+  &__img{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    width: 12rem;
+    float: left;
+}
+  &__about{
+    background-color:$dark-purple;
+    border-radius: 15px;
+    font-size: 1.4rem;
+    transition: all .8s;
+      &:hover{
+        background-color:$white;
+        color: $black;
+  }
+}
+
+&__submit{
+  background-color: $black;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  border: 2px solid $white;
+
+    &:hover{
+      text-decoration: underline;
+  }
+}
+}
+
+  li {
+    float: right;
+    margin-top: 2rem;
+    margin-right: 2rem;
+  }
+  
+  li a {
+    display: block;
+    color: $white;
+    text-align: center;
+    padding: 12px 25px;
+    text-decoration: none;
+  }
+
+
