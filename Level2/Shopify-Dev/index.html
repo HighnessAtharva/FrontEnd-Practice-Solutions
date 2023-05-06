@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/png" href="https://cdn.shopify.com/static/shopify-favicon.png" />
+	<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+	<link rel="stylesheet" href="./style.css" />
+	<title>Shopify Developers Platform—Build. Innovate. Get paid.</title>
+</head>
+<body class="theme-light">
+	<header>
+		<nav>
+			<div class="navigation__left-container">
+				<div class="mobile-menu__container">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="32">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+					</svg>
+				</div>
+				<div class="logo__container">
+					<img class="logo--light" src="./img/shopify-dev-logo.svg" alt="Shopify logo." />
+					<img class="logo--dark" src="./img/shopify-dev-logo-dark.svg" alt="Shopify logo." />
+				</div>
+				<ul class="header__navigation-left">
+					<li><a href="#">Apps</a></li>
+					<li><a href="#">Themes</a></li>
+					<li><a href="#">Custom storefronts</a></li>
+					<li><a href="#">Marketplaces</a></li>
+					<li>
+						<a data-dropdown>APIs and references <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" style="fill: #6d7175">
+								<path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+							</svg>
+						</a>
+						<ul class="hidden" data-dropdown-content>
+							<li>
+								<p class="nav__dropdown-description">Apps</p>
+							</li>
+							<li>
+								<a class="nav__dropdown-item" href="#">GraphQL Admin API</a>
+							</li>
+							<li>
+								<a class="nav__dropdown-item" href="#">REST Admin API</a>
+							</li>
+							<li>
+								<p class="nav__dropdown-description">Themes</p>
+							</li>
+							<li><a class="nav__dropdown-item" href="#">Liquid</a></li>
+							<li><a class="nav__dropdown-item" href="#">Ajax API</a></li>
+							<li>
+								<p class="nav__dropdown-description">Custom storefronts</p>
+							</li>
+							<li>
+								<a class="nav__dropdown-item" href="#">Storefront API</a>
+							</li>
+							<li><a class="nav__dropdown-item" href="#">Hydrogen</a></li>
+							<li>
+								<a class="nav__dropdown-item nav__dropdown-item--seperated" href="#">View all</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="navigation__right-container">
+				<div class="search-bar__container">
+					<span class="search-bar__prefix">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.75" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+						</svg>
+					</span>
+					<input type="text" placeholder="Search" />
+					<span class="search-bar__suffix">/</span>
+				</div>
+				<ul class="header__navigation-right">
+					<li>
+						<button class="theme-toggle">
+							<span class="theme-toggle__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ebaf26" class="theme-light--icon">
+									<path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#6d7175" class="theme-dark--icon">
+									<path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
+								</svg>
+							</span>
+						</button>
+					</li>
+					<li><a href="#">Log in</a></li>
+					<li><a href="#">Sign up</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<section class="hero">
+			<div class="hero__content">
+				<h1 class="hero__heading"> Build anything. <br /> Reimagine commerce. </h1>
+				<p class="hero__description"> Millions of merchants trust Shopify to run their business—but they need developers to build the tools that help them achieve independence. Access powerful APIs to bring your ideas to life on the platform that makes commerce better for everyone. </p>
+				<div class="gutter-bottom">
+					<h3>Develop apps that solve complex merchant problems</h3>
+					<p> Expansive <a href="https://shopify.dev/api/admin/graphql">GraphQL</a> and <a href="https://shopify.dev/api/admin/rest">REST APIs</a> let you integrate into Shopify's admin, online store, checkout, and more. </p>
+				</div>
+				<div class="gutter-bottom">
+					<h3>Integrate seamlessly into existing workflows</h3>
+					<p> Embed your app's features with <a href="https://shopify.dev/apps/tools/app-bridge">App Bridge</a>. Create high quality experiences with the ready-to-build <a href="https://polaris.shopify.com/">Polaris</a> component library. </p>
+				</div>
+				<div class="gutter-bottom">
+					<h3>Help merchants express themselves</h3>
+					<p> Use <a href="https://shopify.dev/api/liquid">Liquid</a> to build beautiful theme templates. Get started with <a href="https://shopify.dev/themes/tools/dawn">Dawn</a>, our blazingly fast, accessible reference theme. </p>
+				</div>
+				<div class="gutter-bottom">
+					<h3>Ship custom shopping experiences</h3>
+					<p> Add Shopify to any web, mobile, or gaming experience with the powerful <a href="https://shopify.dev/api/storefront">Storefront API</a> and SDKs, plus any front-end stack you want. Use <a href="https://shopify.dev/marketplaces">Marketplace Kit</a> to connect your platform and its users to millions of Shopify merchants and their products. </p>
+				</div>
+				<div class="hero__features">
+					<h3>Start building:</h3>
+					<div class="hero-links__container">
+						<a href="#">
+							<div class="docs-card">
+								<div class="docs-card__icon">
+									<img src="./img/app.png" alt="" />
+								</div>
+								<p class="docs-card__title">Apps</p>
+							</div>
+						</a>
+						<a href="#">
+							<div class="docs-card">
+								<div class="docs-card__icon">
+									<img src="./img/themes.png" alt="" />
+								</div>
+								<p class="docs-card__title">Themes</p>
+							</div>
+						</a>
+						<a href="#">
+							<div class="docs-card">
+								<div class="docs-card__icon">
+									<img src="./img/custom-storefronts.png" alt="" />
+								</div>
+								<p class="docs-card__title">Storefronts</p>
+							</div>
+						</a>
+						<a href="#">
+							<div class="docs-card">
+								<div class="docs-card__icon">
+									<img src="./img/marketplaces.png" alt="" />
+								</div>
+								<p class="docs-card__title">Marketplaces</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="hero__illustration"></div>
+			<div class="hero__illustration--mobile"></div>
+		</section>
+		<div class="hero__illustration-2--mobile"></div>
+		<section class="docs-banner">
+			<div class="docs-banner__container">
+				<div>
+					<h2 class="docs-banner__title gutter-bottom"> Launch your app or theme to millions of merchants </h2>
+					<div class="gutter-bottom">
+						<h3>App Store</h3>
+						<p> Get your app in front of the right merchants. With personalized recommendations and multiple billing options, the <a href="#">Shopify App Store</a> is where merchants go to find the apps their business needs most. </p>
+					</div>
+					<div class="gutter-bottom">
+						<h3>Theme Store</h3>
+						<p> Sell your theme to merchants building their brands on the <a href="#">Shopify Theme Store</a>, which offers flexible pricing and targeted merchandising. </p>
+					</div>
+				</div>
+				<ul class="stats-box__container">
+					<li class="stats-box__row">
+						<img src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/coin-dark-2x-8c739582504d734079a9a23ccd56c1d6da6bca12f23bd18e6781083489900083.png" alt="" width="48" />
+						<p>
+							<strong>$12.5B USD</strong><br /> Revenue generated from the Shopify ecosystem (2020) </p>
+					</li>
+					<li class="stats-box__row">
+						<img src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/hearts-dark-2x-b18b5c5f4d66cda6fca6376e548facdffd6bfdd94d48c94b135b48d1a7f6c11b.png" alt="" width="48" />
+						<p><strong>3 in 4 mechants use apps</strong></p>
+					</li>
+					<li class="stats-box__row">
+						<img src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/app-dark-2x-bd9c0647923e9ea8cb5be7e9fb114f5f43be0ffe80d7026e2b9168e856082680.png" alt="" width="48" />
+						<span class="stats-box__addon">x6</span>
+						<p>
+							<strong>Average number of apps installed per merchant</strong>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="community__container">
+			<div class="community__link community__link--borderless">
+				<img class="community__img" src="./img/icon-community.avif" width="160" />
+				<h4 class="community__title">Join a community of builders</h4>
+			</div>
+			<a href="">
+				<div class="community__link">
+					<img class="community__img" src="./img/forums.webp" alt="" width="50" />
+					<p class="community__title">Developer Forums</p>
+					<p class="community__description">Q&A and advice from Shopify community experts</p>
+				</div>
+			</a>
+			<a href="">
+				<div class="community__link">
+					<img class="community__img" src="./img/slack.png" alt="" width="50" />
+					<p class="community__title">#development on Slack</p>
+					<p class="community__description"> Collaboration and connection with Shopify employees </p>
+				</div>
+			</a>
+			<a href="">
+				<div class="community__link">
+					<img class="community__img" src="./img/twitter.png" alt="" width="50" />
+					<p class="community__title">@ShopifyDevs on Twitter</p>
+					<p class="community__description">Product announcements, API updates, tips and more</p>
+				</div>
+			</a>
+			<a href="">
+				<div class="community__link">
+					<img class="community__img" src="./img/changelog.avif" alt="" width="50" />
+					<p class="community__title">Developer Changelog</p>
+					<p class="community__description">The latest Shopify ecosystem updates</p>
+				</div>
+			</a>
+			<a href="">
+				<div class="community__link">
+					<img class="community__img" src="./img/youtube.avif" alt="" width="50" />
+					<p class="community__title">ShopifyDevs YouTube channel</p>
+					<p class="community__description">Tips and insight in dev and design</p>
+				</div>
+			</a>
+			<a href="">
+				<div class="community__link">
+					<img class="community__img" src="./img/discord.webp" alt="" width="50" />
+					<p class="community__title">ShopifyDevs Discord server</p>
+					<p class="community__description">Chat with other Shopify developers</p>
+				</div>
+			</a>
+			<a href="">
+				<div class="community__link">
+					<img class="community__img" src="./img/shopify.avif" alt="" width="50" />
+					<p class="community__title">Shopify Partners blog</p>
+					<p class="community__description">Educational resources and product previews</p>
+				</div>
+			</a>
+		</section>
+		<footer class="footer__top">
+			<div class="footer__items-grid">
+				<div>
+					<h3 class="footer__item-heading">News and updates</h3>
+					<ul class="footer__item-list">
+						<li><a href="#">Developer changelog</a></li>
+						<li><a href="#">Shopify status</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="footer__item-heading">Blogs</h3>
+					<ul class="footer__item-list">
+						<li><a href="#">Partner blog</a></li>
+						<li><a href="#">Engineering blog</a></li>
+						<li><a href="#">UX blog</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="footer__item-heading">Community</h3>
+					<ul class="footer__item-list">
+						<li><a href="#">Developer forums</a></li>
+						<li><a href="#">Devs Discord</a></li>
+						<li><a href="#">Facebook group</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="footer__item-heading">Social</h3>
+					<ul class="footer__item-list">
+						<li><a href="#">Twitch</a></li>
+						<li><a href="#">YouTube</a></li>
+						<li><a href="#">Twitter</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="footer__item-heading">Events</h3>
+					<ul class="footer__item-list">
+						<li><a href="#">Unite</a></li>
+						<li><a href="#">Meetups</a></li>
+						<li><a href="#">Partner Town Hall</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="footer__item-heading">Legal</h3>
+					<ul class="footer__item-list">
+						<li><a href="#">Terms of Service</a></li>
+						<li><a href="#">API Terms of Service</a></li>
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Partner program agreement</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__nav">
+				<ul class="footer-nav__list" role="list">
+					<li class="footer-nav__list-item">
+						<a href="https://www.shopify.com/about">About Shopify</a>
+					</li>
+					<li class="footer-nav__list-item">
+						<a href="https://www.shopify.com/plus">Shopify Plus</a>
+					</li>
+					<li class="footer-nav__list-item">
+						<a href="https://www.shopify.com/careers">Careers</a>
+					</li>
+					<li class="footer-nav__list-item">
+						<a href="https://investors.shopify.com/">Investors</a>
+					</li>
+					<li class="footer-nav__list-item">
+						<a href="https://www.shopify.com/press">Press and Media</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</main>
+	<script>
+		document.querySelector('[data-dropdown]').addEventListener('click', function (e) {
+			if (!e.target.closest('li')) return;
+			e.target.closest('a') && e.target.closest('a').classList.toggle('is-active');
+			document.querySelector('[data-dropdown-content]').classList.toggle('hidden');
+		});
+		document.querySelector('.theme-toggle').addEventListener('click', function (e) {
+			const bodyElement = document.body;
+			if (!e.target.closest('.theme-toggle')) return;
+			bodyElement.classList.contains('theme-light') ? (bodyElement.classList = 'theme-dark') : (bodyElement.classList = 'theme-light');
+		});
+	</script>
+</body>
+</html>

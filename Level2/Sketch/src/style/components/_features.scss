@@ -1,0 +1,208 @@
+.features--container {
+    margin: 3rem 1rem;
+    background-color: rgba(255,255,255,.64);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.1);
+
+    .mac--large, .mac--desktop, .web--large, .web--desktop, .iphone--large, .iphone--desktop {
+        display: none;
+    }
+
+    .mac--container, .browser--container, .iphone--container {
+        display: flex;
+        flex-direction: column-reverse;
+
+        &.mac--container, &.browser--container {
+            border-bottom: 1px solid rgba(0,0,0,.1);
+        }
+
+        .text--wrapper {
+            padding: 1rem;
+
+            .for {
+                font-size: .6875rem;
+                font-family: marfa-medium;
+                padding: 0.75rem 0.5rem;
+                color: rgba(0,0,0,.7);
+                background-color: rgba(0,0,0,.08);
+                border-radius: 6px;
+                margin-bottom: 1rem;
+                width: fit-content;
+                line-height: 0;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                font-family: marfa-bold;
+                line-height: 2rem;
+                letter-spacing: -.5px;
+                margin-bottom: .25rem;
+                color: #212123;
+            }
+
+            .desc {
+                font-size: 1rem;
+                font-family: marfa-light;
+                line-height: 1.5rem;
+                color: #212123;
+                margin-bottom: 1.25rem;
+            }
+
+            .blackened--link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: fit-content;
+                line-height: 1.25;
+                min-height: 2.5rem;
+                padding: .5625rem .6875rem;
+                font-size: .875rem;
+                font-family: marfa-semibold;
+                background-color: #000;
+                color: #fff;
+                border: 1px solid transparent;
+                border-radius: 6px;
+                box-shadow: 0 1px 2px rgba(0,0,0,.1);
+                text-decoration: none;
+            }
+
+            .links--container {
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                a {
+                    font-size: .875rem;
+                    line-height: 1.3125rem;
+                    color: #212123;
+                    text-decoration: none;
+                    font-family: marfa-medium;
+                }
+            }
+
+            .iphone--desc {
+                font-size: .875rem;
+                line-height: 1.3125rem;
+                color: rgba(0,0,0,.48);
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .features--container {
+        .mac--small, .web--small, .iphone--small {
+            display: none;
+        }
+
+        .mac--desktop, .web--large, .iphone--desktop {
+            display: unset;
+
+            &.mac--desktop {
+                border-top-left-radius: 12px;
+            }
+
+            &.iphone--desktop {
+                border-bottom-left-radius: 12px;
+            }
+        }
+
+        .mac--container, .browser--container, .iphone--container {
+            flex-direction: row;
+            // align-items: center;
+
+            .text--wrapper {
+                align-self: center;
+
+                .links--container {
+                    flex-direction: row;
+                    gap: unset;
+
+                    a:nth-child(1) {
+                        &::after {
+                            content: "·";
+                            margin: 0 12px;
+                        }
+                    }
+                }
+            }
+
+            img {
+                width: 50%;
+            }
+
+            &.browser--container {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .features--container {
+        .web--large {
+            display: none;
+        }
+
+        .web--desktop {
+            display: unset;
+        }
+
+        .mac--container, .browser--container, .iphone--container {
+            .text--wrapper {
+                width: 45%;
+                margin: auto;
+                padding: 2rem;
+
+                h2 {
+                    line-height: 2.5rem;
+                    font-size: 2rem;
+                }
+
+                .desc {
+                    font-size: 1.25rem;
+                    line-height: 1.75rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                .blackened--link {
+                    font-size: 1rem;
+                    padding: .6875rem .8125rem;
+
+                    &:hover {
+                        background-color: rgba(0,0,0,.85);
+                    }
+                }
+
+                .links--container {
+                    flex-direction: row;
+
+                    a {
+                        transition: .2s;
+
+                        &:hover {
+                            color: rgba(33,33,35,.7);
+                            transition: .2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .features--container {
+        margin: 5rem 8vw;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .features--container {
+        margin: 6rem 16vw;
+    }
+}

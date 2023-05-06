@@ -1,0 +1,62 @@
+@font-face {
+    font-family: marfa-black;
+    src: url(../fonts/ABCMarfa-Black.woff2);
+}
+
+@font-face {
+    font-family: marfa-bold;
+    src: url(../fonts/ABCMarfa-Bold.woff2);
+}
+
+@font-face {
+    font-family: marfa-light;
+    src: url(../fonts/ABCMarfa-Light.woff2);
+}
+
+@font-face {
+    font-family: marfa-medium;
+    src: url(../fonts/ABCMarfa-Medium.woff2);
+}
+
+@font-face {
+    font-family: marfa-regular;
+    src: url(../fonts/ABCMarfa-Regular.woff2);
+}
+
+@font-face {
+    font-family: marfa-semibold;
+    src: url(../fonts/ABCMarfa-Semibold.woff2);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+:focus {
+    outline-offset: .35rem;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: marfa-regular;
+}
+
+main {
+    background: url("../images/page-background@2x.avif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@import "./components/header";
+@import "./components/hero";
+@import "./components/features";
+@import "./components/footer";
