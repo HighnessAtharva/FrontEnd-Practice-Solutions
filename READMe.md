@@ -1,4 +1,4 @@
-Solutions to all challenges from <https://www.frontendpractice.com/projects>. Work in progress.
+Solutions to all challenges from [Front-End Practice](<https://www.frontendpractice.com/projects>). Work in progress.
 
 Solutions are availble in:-
 
